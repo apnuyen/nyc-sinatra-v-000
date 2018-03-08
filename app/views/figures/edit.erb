@@ -1,6 +1,6 @@
 <h1>Edit Figure</h1>
 <form action="/figures/<%=@figure.id%>" method="post">
-  <input type="hihdden" id="hidden" name="_method" value="patch">
+  <input type="hidden" id="hidden" name="_method" value="patch">
   <p>Name: <input type="text" id="figure_name" name="figure[name]" value="<%=@figure.name%>"></p>
   <ul>
     <li>Choose an existing landmark:</li>
