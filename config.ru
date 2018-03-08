@@ -9,5 +9,5 @@ end
 
 use Rack::MethodOverride
 use LandmarksController
-use FiguresController 
+use FiguresController
 run ApplicationController
