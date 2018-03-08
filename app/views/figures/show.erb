@@ -1,0 +1,14 @@
+<h1>Figure: <%=@figure.name%></h1>
+<h2>Landmarks:</h2>
+<ul>
+  <%@figure.landmarks.each do |landmark|%>
+  <li><%=landmark.name%> completed in <%=landmark.year_complete%></li>
+  <%end%>
+</ul>
+
+<h2>Titles:</h2>
+<ul>
+  <%@figure.titles.each do |title|%>
+   <li><%=title.name%></li>
+   <%end%>
+</ul>
