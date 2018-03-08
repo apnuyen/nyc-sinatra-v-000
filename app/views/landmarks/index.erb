@@ -1,13 +1,7 @@
-<h1>Landmarks Index</h1>
-<table>
-  <tr>
-    <th>Landmark Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <% Landmark.all.each do |landmark|%>
-  <tr>
-    <td><a href="/landmarks/<%=landmark.id%>"><%=landmark.name%></a></td>
-    <td><%=landmark.year_completed %></td>
-  </tr>
-  <%end%>
-</table>
+<h1>List of all landmarks</h1>
+<ol>
+<% Landmark.all.each do |landmark| %>
+<a href='/landmarks/<%= landmark.id %>'><li><p>Name:<%= landmark.name %></li></a>
+<p>Year:<%= landmark.year_completed %></p>
+<% end %>
+</ol>
