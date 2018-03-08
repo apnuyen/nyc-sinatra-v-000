@@ -10,7 +10,7 @@
     <%end%>
     <li>Choose an existing title:</li>
     <%Title.all.each do |title| %>
-    <input type="checkbox" id="title+<%=title.id%>" name="figure[title_ids][]" value="<%=title.id%>" <%="checked" if @figure.titles.include?title%>>
+    <input type="checkbox" id="title_<%=title.id%>" name="figure[title_ids][]" value="<%=title.id%>" <%="checked" if @figure.titles.include?title%>>
     <%=title.name%>
     <%end%>
     <li>Create a new landmark (optional):</li>
