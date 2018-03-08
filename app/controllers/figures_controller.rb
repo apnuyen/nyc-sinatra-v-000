@@ -22,18 +22,17 @@ class FiguresController < ApplicationController
     erb :"figures/show"
   end
 
-  get "/figures/:id/edit" do 
+  get "/figures/:id/edit" do
     @figure = Figure.find(params[:id])
-    erb :"figures/edit" 
-  end 
+    erb :"figures/edit"
+  end
 
-  patch "/figures/:id" do 
+  patch "/figures/:id" do
     figure = Figure.find(params[:id])
     figure.update(params[:figure])
     figure.landmarks.find_or_create_by(params[:landmark])
     figure.titles.find_or_create_by(params[:title])
 
     redirect to "/figures/#{figure.id}"
-  end 
+  end
 end
-
